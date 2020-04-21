@@ -1,0 +1,78 @@
+#mask{
+    min-height: 100vh;
+    max-width: 1460px;
+    margin: 0 auto;
+    background-color: $color-11;
+    font-family: Regular Noto Sans CJK TC;
+    font-size: $fontsize-m;
+}
+.noScroll{
+    overflow: hidden;
+    height: 100vh;
+}
+
+header{
+    background: $color-12;
+    padding: 20px 16px;
+    display: flex;
+    align-items: center;
+    font-size: $fontsize-xl;
+    img{
+        width: 30px;
+        height: auto;
+        margin-right: 10px;
+    }
+}
+article{
+    min-height: calc(100vh - 70px - 137px);
+    box-sizing: border-box;
+}
+
+section{
+    padding: 5px 16px;
+    margin: 1vh 0;
+}
+
+.back{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.warning{
+    position: fixed;
+    top: calc((100vh - 93px) / 2);
+    right: calc((100vw - 228px) / 2);
+    z-index: 10;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    border-radius: 10px;
+    background-color: $color-12;
+    box-shadow: 0 0 10px $color-8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p{
+        font-size: $fontsize-xl;
+        margin-bottom: 15px;
+    }
+    .ok{
+        background: $color-master;
+        color: $color-12;
+        padding: 5px 8px;
+        border-radius: 3px;
+        @include pointer;
+    }
+}
+
+.grayBack{
+    background-color: $color-8;
+}
+
+.blueBack{
+    background-color: $color-4;
+}

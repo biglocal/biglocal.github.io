@@ -1,0 +1,136 @@
+.searchInput{
+    display: inline-block;
+    position: relative;
+    margin: 2px;
+    img, &>i{
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+    }
+    &>i{
+        font-size:$fontsize-xxl;
+        color: $color-4;
+    }
+    @include w400{
+        display: block;
+    }
+}
+
+.search{
+    top: 81px;
+    left: 16px;
+    width: 343px;
+    height: 46px;
+    background: $color-12;
+    border: 1px solid $color-10;
+    border-radius: 10px;
+    opacity: 1;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    font-size: $fontsize-xl;
+    color: $color-4;
+    @include w400{
+        width: 100%;
+    }
+}
+
+.active{
+    border-radius: 10px 10px 0 0;
+}
+
+.searchBar{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid $color-10;
+    border-top: none;
+    font-size: $fontsize-xl;
+    color: $color-4;
+    background: $color-12;
+    i{
+        margin-right: 10px;
+    }
+    li{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        @include pointer;
+        @include tran-3;
+        &:hover{
+            color: $color-master;
+            box-shadow: 0 0 10px $color-10 inset;
+        }
+    }
+    .clearData{
+        color: $color-5;
+        &:hover{
+            color: $color-2;
+        }
+    }
+}
+
+.condition{
+    margin: 15px 0;
+    position: relative;
+    &>span{
+        background-color: $color-master;
+        color: $color-11;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin: 2px;
+        display: inline-block;
+        @include pointer;
+    }
+    ul{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 1px 1px 5px $color-5;
+        padding: 5px;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 85px;
+        background-color: $color-12;
+        @include w400{
+            top: 40px;
+            left: 0;
+        }
+    }
+    li{
+        padding: 0 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 80px;
+    }
+    li:first-child{
+        border-right: 1px solid $color-5;
+    }
+    input{
+        display: none;
+    }
+    label{
+        padding: 6px;
+        transition: all .3s;
+        @include pointer;
+        &:hover{
+            box-shadow: 0 0 1px $color-4 inset;
+        }
+    }
+}
+
+.unableCondition{
+    color: $color-7;
+}
+
+.activeSort{
+    background: $color-17;
+}
+
+.activeNum{
+    background: $color-19;
+}

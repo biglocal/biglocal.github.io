@@ -1,0 +1,25 @@
+footer{
+    height: 105px;
+    background: $color-4;
+    color: $color-12;
+    font-size: $fontsize-xl;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.author{
+    color: $color-5;
+    font-size: $fontsize-m;
+    margin-top: 8px;
+    a{
+        color: $color-5;
+        text-decoration: none;
+        @include pointer;
+        &:hover{
+            color: $color-12;
+            background-image: linear-gradient(to top, $color-5 50%, $color-18 50.1%);
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import './basic/reset';
+@import './basic/mixin_screen';
+@import './basic/mixin';
+@import './basic/variable';
+
+@import './basic/basic';
+@import './page/info';
+@import './page/searchBlock';
+@import './page/maskData';
+@import './page/btn';
+@import './page/footer';
+@import './page/tips';
+
+[v-cloak] {
+    display: none;
+}
